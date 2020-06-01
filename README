@@ -1,0 +1,49 @@
+# tedbree-helpers
+
+[![Tedbree Helpers is released under the Apache-2.0 license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
+
+### useNavigtion
+
+```javascript
+import route from 'ziggy/route';
+
+
+export default {
+  setup() {
+
+    let routes = {
+      primary: [
+        {
+            title: 'Dashboard',
+            icon: 'dashboard',
+            href: route('home').url(),
+        },
+        {
+            title: 'Campaigns',
+            icon: 'campaigns',
+            href: route('campaigns.index').url()
+        },
+        {
+            title: 'Projects',
+            icon: 'projects',
+            href: route('projects.index').url()
+        }
+      ],
+
+      alternate: [
+        {
+            title: 'Publish',
+            icon: 'publish',
+            href: 'https:example.com/',
+            external: true
+        },
+      ]
+    };
+
+    const { isNavActive, navigation, alternateNavigation } = useNavigtion(routes);
+
+    return { isNavActive, navigation, alternateNavigation };
+  }
+}
+
+```

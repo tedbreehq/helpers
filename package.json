@@ -1,0 +1,58 @@
+{
+  "name": "@tedbreehq/helpers",
+  "description": "A collection of helpers, directives and composables using Vue.js",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish",
+    "deploy": "npm run build && git add -A && git commit -m 'deployed updated version' && npm version patch && git push && git push --tags &&  npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tedbreehq/helpers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tedbreehq/helpers/issues/new"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "homepage": "https://github.com/tedbreehq/helpers/",
+  "keywords": [
+    "tedbree",
+    "tedbree-helpers",
+    "vue",
+    "vuejs",
+    "composables",
+    "helpers",
+    "javascript"
+  ],
+  "author": "Tedbree Digital",
+  "contributors": [
+    {
+      "name": "Ogunmoye Damilola",
+      "email": "dami@tedbree.com"
+    }
+  ],
+  "files": [
+    "/src"
+  ],
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "dependencies": {
+    "date-fns": "^2.14.0",
+    "lodash.debounce": "^4.0.8",
+    "vanilla-lazyload": "^16.1.0",
+    "@vue/composition-api": "^0.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "babel-preset-vue": "^2.0.2",
+    "jest": "^26.0.1",
+    "vue": "^2.6.11"
+  }
+}
