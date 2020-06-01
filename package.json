@@ -1,11 +1,10 @@
 {
   "name": "@tedbreehq/helpers",
   "description": "A collection of helpers, directives and composables using Vue.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "Apache-2.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm publish",
     "deploy": "npm run build && git add -A && git commit -m 'deployed updated version' && npm version patch && git push && git push --tags &&  npm publish"
   },
   "repository": {
