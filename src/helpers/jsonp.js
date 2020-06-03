@@ -1,6 +1,6 @@
-import { flatten, formatParams } from './functions';
+import { flatten, formatParams } from './functions.js';
 
-import {randomStr} from "./string";
+import {randomStr} from "./string.js";
 
 /**
  * JSONP function.

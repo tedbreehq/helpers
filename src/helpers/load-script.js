@@ -1,4 +1,4 @@
-import {isScriptLoaded} from "./validate";
+import {isScriptLoaded} from "./validate.js";
 
 export function loadExternalScript(src, id = null) {
     return new Promise((resolve, reject) => {

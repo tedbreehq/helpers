@@ -1,4 +1,4 @@
-import {isBrowser} from "./validate";
+import {isBrowser} from "./validate.js";
 
 export const userAgent = isBrowser ? window.navigator.userAgent.toLowerCase() : '';
 
