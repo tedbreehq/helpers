@@ -1,6 +1,6 @@
 import { isClient } from '../helpers'
 import {computed, ref} from '@vue/composition-api'
-import { useEventListener } from './useEventListener'
+import { useEventListener } from './useEventListener.js'
 
 let screens = {
     sm: '640px',
