@@ -1,4 +1,4 @@
-import { isArray } from '../helpers';
+import { isArray } from '../helpers/validate.js';
 import { ref, computed } from "@vue/composition-api";
 
 

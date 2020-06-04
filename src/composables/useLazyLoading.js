@@ -1,6 +1,6 @@
 import LazyLoad from "vanilla-lazyload";
 import {onMounted, onUpdated} from '@vue/composition-api';
-import {objectMerge} from "../helpers";
+import {objectMerge} from "../helpers/functions.js";
 
 export function useLazyLoading(elementSelector, options = {}) {
     if (!document.lazyLoadInstance) {

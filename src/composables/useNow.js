@@ -1,5 +1,5 @@
 import { ref, getCurrentInstance, onUnmounted } from '@vue/composition-api'
-import { timestamp } from "../helpers";
+import { timestamp } from "../helpers/date.js";
 
 export function useNow() {
     const now = ref(timestamp());

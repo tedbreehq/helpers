@@ -1,4 +1,4 @@
-import { isClient } from '../helpers'
+import { isClient } from '../helpers/validate.js'
 import {computed, ref} from '@vue/composition-api'
 import { useEventListener } from './useEventListener.js'
 

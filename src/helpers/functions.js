@@ -1,7 +1,5 @@
 import {isBrowser} from "./validate.js";
 
-export const userAgent = isBrowser ? window.navigator.userAgent.toLowerCase() : '';
-
 export function objectMerge(obj, src) {
     Object.keys(src).forEach(function (key) { obj[key] = src[key]; });
     return obj;

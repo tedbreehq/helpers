@@ -1,9 +1,5 @@
-import { isValidColor } from '../helpers';
+import { isValidColor } from '../helpers/validate.js';
 import { computed, ref } from '@vue/composition-api';
-
-let colors = {
-
-};
 
 export function useColor(colorValue) {
     if(!isValidColor(colorValue)) return;
