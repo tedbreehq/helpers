@@ -5,6 +5,8 @@ export { clickOutside };
 
 // helpers
 
+export { uuid } from './helpers/uuid.js';
+
 export { jsonp } from './helpers/jsonp.js';
 
 export { keyCodes } from './helpers/keycodes.js';

@@ -11,13 +11,13 @@ import formatDistance from 'date-fns/formatDistance'
 import differenceInHours from 'date-fns/differenceInHours'
 
 
-export function formatDate(value) {
+export const formatDate = (value) => {
     if (!value) return '';
 
     return format(parseISO(value), 'MMM dd, hh:mm a')
 }
 
-export function formatDateShort(value) {
+export const formatDateShort = (value) => {
     let dateFormat = 'MMM dd';
 
     if (!value) return format(new Date(), dateFormat);
@@ -29,25 +29,25 @@ export const now = () => Date.now();
 
 export const timestamp = () => +Date.now();
 
-export function formatCalendarDate(value) {
+export const formatCalendarDate = (value) => {
     if (!value) value = new Date();
     return format(parseISO(value), 'MMM, dd, yyyy, hh:mm a');
 }
 
-export function isPastDate(value) {
+export const isPastDate = (value) => {
     return isPast(parseISO(value))
 }
 
-export function isToday(value) {
+export const isToday = (value) => {
     return isSameDay(parseISO(value), new Date())
 }
 
-export function formatDistanceDate(date) {
+export const formatDistanceDate = (date) => {
     if (!date) date = new Date();
     return formatDistance(parseISO(date), new Date(),  { addSuffix: true })
 }
 
-export function dateRangeAsString(ends_at, starts_at = now()) {
+export const dateRangeAsString = (ends_at, starts_at = now()) => {
 
     starts_at = formatISO(parse(starts_at));
     ends_at = formatISO(parse(ends_at));
@@ -66,12 +66,12 @@ export function dateRangeAsString(ends_at, starts_at = now()) {
     return format(starts_at, 'Do') + ' - ' + format(ends_at, 'Do MMM yyyy');
 }
 
-export function formatDatatableDate(value) {
+export const formatDatatableDate = (value) => {
     if (!value) value = new Date();
     return format(parseISO(value), 'MMM dd, yyyy')
 }
 
-export function getRelativeTime(date) {
+export const getRelativeTime = (date) => {
     const parsedIntDate = parseInt(date, 10);
 
     if (!isSameYear(Date.now(), parsedIntDate)) {

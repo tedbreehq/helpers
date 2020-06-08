@@ -1,4 +1,12 @@
-export function createSlug(str) {
+export const upperFirst = (str) => (str.charAt(0).toUpperCase() + str.slice(1));
+
+export const kebabCase = (str) => (str || '').replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+
+export const camelize = (str) => str.replace(/-(\w)/g, (_, c) => c ? c.toUpperCase() : '');
+
+export const randomStr = () => (Math.floor(Math.random() * 100000) * Date.now()).toString(16);
+
+export const createSlug = (str)  => {
     str = str.replace(/^\s+|\s+$/g, ""); // trim
     str = str.toLowerCase();
 
@@ -20,11 +28,3 @@ export function createSlug(str) {
 
     return str;
 }
-
-export const upperFirst = (str) => (str.charAt(0).toUpperCase() + str.slice(1));
-
-export const kebabCase = (str) => (str || '').replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
-
-export const camelize = (str) => str.replace(/-(\w)/g, (_, c) => c ? c.toUpperCase() : '');
-
-export const randomStr = () => (Math.floor(Math.random() * 100000) * Date.now()).toString(16);

@@ -1,11 +1,9 @@
-import {isBrowser} from "./validate.js";
-
-export function objectMerge(obj, src) {
+export const objectMerge = (obj, src) => {
     Object.keys(src).forEach(function (key) { obj[key] = src[key]; });
     return obj;
 }
 
-export function convertToUnit(str, unit = 'px') {
+export const convertToUnit = (str, unit = 'px') => {
     if (str == null || str === '') {
         return undefined
     } else if (isNaN(+str)) {
@@ -15,7 +13,7 @@ export function convertToUnit(str, unit = 'px') {
     }
 }
 
-export function arrayDiff(a, b) {
+export const arrayDiff = (a, b) => {
     const diff = [];
     for (let i = 0; i < b.length; i++) {
         if (a.indexOf(b[i]) < 0) diff.push(b[i])
@@ -23,7 +21,7 @@ export function arrayDiff(a, b) {
     return diff
 }
 
-export function formatParams(queryName, value) {
+export const formatParams = (queryName, value) => {
     queryName = queryName.replace(/=/g, '');
     let result = [];
 
@@ -51,8 +49,9 @@ export function formatParams(queryName, value) {
     return result
 }
 
-export function flatten(array) {
+export const flatten = (array) => {
     let queries = [];
+
     array.forEach(function (item) {
         if (typeof item === 'string') {
             queries.push(item)
@@ -60,5 +59,6 @@ export function flatten(array) {
             queries = queries.concat(flatten(item))
         }
     });
+
     return queries
 }

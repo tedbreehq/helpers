@@ -1,6 +1,6 @@
 import {isScriptLoaded} from "./validate.js";
 
-export function loadExternalScript(src, id = null) {
+export const loadExternalScript = (src, id = null) => {
     return new Promise((resolve, reject) => {
         let async_load = function () {
             if (!isScriptLoaded(src)) {
@@ -30,7 +30,7 @@ export function loadExternalScript(src, id = null) {
     });
 }
 
-export function loadScript(src) { // eslint-disable-line no-param-reassign
+export const loadScript = (src) => { // eslint-disable-line no-param-reassign
     return new Promise(function (resolve, reject) {
         if (document.querySelector('script[src="' + src + '"]')) {
             resolve();
@@ -52,7 +52,7 @@ export function loadScript(src) { // eslint-disable-line no-param-reassign
     });
 }
 
-export function unloadScript(src) { // eslint-disable-line no-param-reassign
+export const unloadScript = (src) => { // eslint-disable-line no-param-reassign
     return new Promise(function (resolve, reject) {
         const el = document.querySelector('script[src="' + src + '"]');
 

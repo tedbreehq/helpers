@@ -16,7 +16,7 @@ import {randomStr} from "./string.js";
  *     age: 26
  *   }, 1000)
  */
-export function jsonp(url, params, timeout) {
+export const jsonp = (url, params, timeout) => {
     params = params || {};
     timeout = timeout || _timeout;
 
