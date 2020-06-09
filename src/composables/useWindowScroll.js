@@ -1,6 +1,6 @@
-import { isClient } from '../helpers'
+import { isClient } from '../helpers/validate.js'
 import { ref } from '@vue/composition-api'
-import { useEventListener } from './useEventListener'
+import { useEventListener } from './useEventListener.js'
 
 export function useWindowScroll () {
     const x = ref(isClient ? window.pageXOffset : 0);

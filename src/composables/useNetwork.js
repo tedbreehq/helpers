@@ -1,5 +1,5 @@
 import { onMounted, ref } from '@vue/composition-api'
-import { useEventListener } from './useEventListener'
+import { useEventListener } from './useEventListener.js'
 
 export function useNetwork () {
     const NT = ['bluetooth', 'cellular', 'ethernet', 'none', 'wifi', 'wimax', 'other', 'unknown'];

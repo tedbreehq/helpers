@@ -1,5 +1,5 @@
 import { ref } from '@vue/composition-api'
-import { useEventListener } from './useEventListener'
+import { useEventListener } from './useEventListener.js'
 
 export function useClipboard () {
     const text = ref('');

@@ -1,5 +1,5 @@
 import { watch } from '@vue/composition-api';
-import { useTimeout } from './useTimeout';
+import { useTimeout } from './useTimeout.js';
 
 export function useTimeoutFn(cb, interval) {
     const { ready, start, stop } = useTimeout(interval);

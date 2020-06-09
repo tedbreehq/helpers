@@ -4,6 +4,8 @@ export {clickOutside} from './directives/click-outside.js';
 // helpers
 export { jsonp } from './helpers/jsonp.js';
 
+export { debounce } from './helpers/debounce.js'
+
 export { IdGenerator } from './helpers/id.js';
 
 export { hasClass, removeClass, addClass } from './helpers/css.js';
@@ -28,7 +30,7 @@ export {
 } from './helpers/string.js'
 
 export { 
-    arrayDiff, flatten, convertToUnit, formatParams, objectMerge 
+    arrayDiff, flatten, convertToUnit, formatParams, objectMerge
 } from './helpers/functions.js';
 
 export { 

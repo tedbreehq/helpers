@@ -26,7 +26,7 @@ export default [
 	{
         input: 'src/main.js',
         plugins: [resolve()],
-		external: ['@vue/composition-api', 'date-fns', 'vanilla-lazyload', 'lodash-es', 'vue'],
+		external: ['@vue/composition-api', 'date-fns', 'vanilla-lazyload', 'vue'],
 		output: [
 			{ file: pkg.main, format: 'cjs' },
 			{ file: pkg.module, format: 'es' }

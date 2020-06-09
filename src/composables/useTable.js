@@ -1,4 +1,4 @@
-import debounce from 'lodash-es/debounce';
+import {debounce} from '../helpers/debounce.js';
 import { reactive, computed } from '@vue/composition-api';
 
 export function useTable(props, context) {
