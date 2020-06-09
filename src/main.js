@@ -8,6 +8,8 @@ export { IdGenerator } from './helpers/id.js';
 
 export { hasClass, removeClass, addClass } from './helpers/css.js';
 
+export { hexToHsl, hexToRgb, rgbToHex, rgbToHsl } from './helpers/colors.js';
+
 export { isFocusable, isVisible } from './helpers/elements.js';
 
 export { isKeyPressed, keyCodes } from './helpers/keycodes.js';
