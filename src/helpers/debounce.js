@@ -12,7 +12,7 @@
  * @param {Boolean} whether to execute at the beginning (`false`)
  * @api public
  */
-export const debounce => (func, wait, immediate) => {
+export const debounce = (func, wait, immediate) => {
     var timeout, args, context, timestamp, result;
     if (null == wait) wait = 100;
   
