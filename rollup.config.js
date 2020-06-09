@@ -1,19 +1,30 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import { terser } from "rollup-plugin-terser";
+import babel from 'rollup-plugin-babel';
 import pkg from './package.json';
 
 export default [
 	// browser-friendly UMD build
 	{
 		input: 'src/main.js',
-		output: {
-			name: 'tedbree-helpers',
-			file: pkg.browser,
-			format: 'umd'
-		},
+		output: [
+			{
+				name: 'tedbree-helpers',
+				file: pkg.browser,
+				format: 'umd'
+			},
+			{
+				name: 'tedbree-helpers',
+				file: pkg.minify.browser,
+				format: 'umd',
+				plugins: [terser()]
+			}
+		],
 		plugins: [
-			resolve(), // so Rollup can find `ms`
-			commonjs() // so Rollup can convert `ms` to an ES module
+			resolve({browser: true,}), // so Rollup can find node packages
+			commonjs(), // so Rollup can convert `ms` to an ES module			
+			babel({exclude: 'node_modules/**',}),
 		]
 	},
 
@@ -25,11 +36,13 @@ export default [
 	// `file` and `format` for each target)
 	{
         input: 'src/main.js',
-        plugins: [resolve()],
-		external: ['@vue/composition-api', 'date-fns', 'vanilla-lazyload', 'vue'],
+        plugins: [resolve(), commonjs()],
+		external: ['@vue/composition-api', 'date-fns', 'vue'],
 		output: [
 			{ file: pkg.main, format: 'cjs' },
-			{ file: pkg.module, format: 'es' }
+			{ file: pkg.minify.main, format: "cjs", plugins: [terser()] },
+			{ file: pkg.module, format: 'es' },
+			{ file: pkg.minify.module, format: 'es', plugins: [terser()]  }
 		]
 	}
 ];

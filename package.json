@@ -46,13 +46,21 @@
     "vanilla-lazyload": "^16.1.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.10.2",
     "@rollup/plugin-commonjs": "^12.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
     "jest": "^26.0.1",
     "rollup": "^2.13.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^6.1.0",
     "vue": "^2.6.11"
   },
-  "main": "dist/tedbree-helpers.js",
   "module": "dist/tedbree-helpers.esm.js",
-  "browser": "dist/tedbree-helpers.umd.js"
+  "browser": "dist/tedbree-helpers.umd.js",
+  "main": "dist/tedbree-helpers.js",
+  "minify": {
+    "main": "dist/tedbree-helpers.min.js",
+    "module": "dist/tedbree-helpers.esm.min.js",
+    "browser": "dist/tedbree-helpers.umd.min.js"
+  }
 }
