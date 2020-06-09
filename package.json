@@ -1,7 +1,7 @@
 {
   "name": "@tedbreehq/helpers",
   "description": "A collection of helpers, directives and composables using Vue.js",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "Apache-2.0",
   "scripts": {
     "build": "rollup -c",
