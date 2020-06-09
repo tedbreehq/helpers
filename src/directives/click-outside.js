@@ -38,4 +38,4 @@ directive.unbind = function (el) {
     }
 };
 
-export default typeof window !== 'undefined' ? directive : {}
+export const clickOutside = () => typeof window !== 'undefined' ? directive : {}

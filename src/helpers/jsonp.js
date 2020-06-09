@@ -1,6 +1,6 @@
 import { flatten, formatParams } from './functions.js';
 
-import {randomStr} from "./string.js";
+import { randomString } from "./string.js";
 
 /**
  * JSONP function.
@@ -26,7 +26,7 @@ export const jsonp = (url, params, timeout) => {
         }
 
         let callbackQuery = params.callbackQuery || 'callback';
-        let callbackName = params.callbackName || 'jsonp_' + randomStr();
+        let callbackName = params.callbackName || 'jsonp_' + randomString();
 
         params[callbackQuery] = callbackName;
 
